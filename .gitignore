@@ -1,2 +1,6 @@
-/vendor
-/build
+/vendor/
+logs
+*.swo
+*.swp
+*.cache
+build
