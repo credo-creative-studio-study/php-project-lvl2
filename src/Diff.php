@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Diff;
+namespace Differ\Diff;
 
-use App\Acl\ResourceUndefined;
-
-use function Functional\flatten;
+use Differ\Acl\ResourceUndefined;
 
 function schemeConstruct(array $schemeGroups): array
 {
@@ -57,7 +55,7 @@ function parseScheme(array $from, array $to): array
     return $scheme;
 }
 
-function format(array $scheme): string
+function formatByScheme(array $scheme): string
 {
     $newScheme = array_map(function ($field) {
         $key = array_keys($field)[2];
@@ -84,7 +82,7 @@ function gendiff(string $from = null, string $to = null): string
     $toData = json_decode($to, true);
 
     $scheme = parseScheme($fromData, $toData);
-    $string = format($scheme);
+    $string = formatByScheme($scheme);
 
     return $string;
 }

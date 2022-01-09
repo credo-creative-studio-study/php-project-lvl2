@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Acl;
+namespace Differ\Acl;
 
 class Exception extends \Exception
 {

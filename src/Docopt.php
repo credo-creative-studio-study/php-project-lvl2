@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Docopt;
+namespace Differ\Docopt;
+
+use Docopt;
 
 /**
  * @param array<mixed> $config

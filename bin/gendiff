@@ -9,10 +9,10 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function App\Diff\gendiff;
-use function App\Diff\printdiff;
-use function App\Docopt\create;
-use function App\Docopt\getPathToFile;
+use function Differ\Diff\gendiff;
+use function Differ\Diff\printdiff;
+use function Differ\Docopt\create;
+use function Differ\Docopt\getPathToFile;
 
 $firstFileArgName = '<firstFile>';
 $secondFileArgName = '<secondFile>';
@@ -42,10 +42,9 @@ $config = [
 $docopt = create($interface, $config);
 $pathToFirstFile = getPathToFile($docopt, $firstFileArgName);
 $pathToSecondFile = getPathToFile($docopt, $secondFileArgName);
-print_r(__DIR__);
-print_r($pwd);
-// $PWD = $_SERVER['PWD'];
-// $fileContent1 = file_get_contents("{$PWD}/{$pathToFirstFile}");
-// $fileContent2 = file_get_contents("{$PWD}/{$pathToSecondFile}");
 
-// printDiff(gendiff($fileContent1, $fileContent2));
+$PWD = getcwd();
+$fileContent1 = file_get_contents("{$PWD}/{$pathToFirstFile}");
+$fileContent2 = file_get_contents("{$PWD}/{$pathToSecondFile}");
+
+printDiff(gendiff($fileContent1, $fileContent2));

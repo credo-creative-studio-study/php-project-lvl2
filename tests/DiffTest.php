@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Tests;
+namespace Differ\Tests;
 
 use PHPUnit\Framework\TestCase;
 
-use function App\Diff\gendiff;
+use function Differ\Diff\gendiff;
 
-use App\Acl\{
+use Differ\Acl\{
     ResourceUndefined,
 };
 
 
-require_once 'src/Acl/ResourceUndefined.php';
+// require_once 'src/Acl/ResourceUndefined.php';
 
 class DiffTest extends TestCase
 {
