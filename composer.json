@@ -40,6 +40,6 @@
         "symfony/yaml": "^5.2",
         "funct/funct": "^1.5",
         "phpstan/extension-installer": "^1.1.0",
-        "phpstan/phpstan": "^0.12.70"
+        "phpstan/phpstan": "^1.2.0"
     }
 }
