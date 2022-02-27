@@ -5,7 +5,9 @@
     "type": "project",
     "license": "MIT",
     "scripts": {
-      "test": "phpunit tests"
+      "test": "phpunit tests",
+      "phpcs": "phpcs",
+      "phpunit": "phpunit"
     },
     "autoload": {
         "psr-4": {
@@ -13,8 +15,12 @@
           "Differ\\Tests\\": "tests"
         },
         "files": [
-          "src/Diff.php",
-          "src/Docopt.php"
+            "src/Differ.php",
+            "src/Parsers.php",
+            "src/Formatters.php",
+            "src/Formatters/Json.php",
+            "src/Formatters/Plain.php",
+            "src/Formatters/Stylish.php"
         ]
       },
     "authors": [
@@ -32,6 +38,8 @@
     "require": {
         "phpstan/phpstan": "^1.3",
         "docopt/docopt": "^1.0",
-        "lstrojny/functional-php": "^1.17"
+        "lstrojny/functional-php": "^1.17",
+        "symfony/yaml": "^5.4",
+        "funct/funct": "^1.5"
     }
 }
