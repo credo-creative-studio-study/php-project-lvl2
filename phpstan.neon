@@ -1,10 +1,9 @@
+includes:
+  - vendor/hexlet/phpstan-fp/phpstan.neon
+
 parameters:
-    checkMissingIterableValueType: false
-    level: 8
-    paths:
-        - src
-        - tests
-    ignoreErrors:
-    -
-        message: '#Access to an undefined property object::\$args#'
-        path: src/Docopt.php
+
+  phpstanFunctionalProgramming:
+    disallowClasses: false
+    disallowThrow: false
+    disallowUnusedExpression: false
