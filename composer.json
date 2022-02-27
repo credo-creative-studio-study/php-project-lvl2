@@ -38,8 +38,8 @@
         "php": ">=7.4.3",
         "docopt/docopt": "^1.0",
         "symfony/yaml": "^5.2",
-        "funct/funct": "^1.5",
         "phpstan/extension-installer": "^1.1.0",
-        "phpstan/phpstan": "^1.2.0"
+        "phpstan/phpstan": "^1.2.0",
+        "lstrojny/functional-php": "^1.17"
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Differ\Formatters\Stylish;
 
-use function Funct\Collection\flattenAll;
+use function Functional\flatten;
 
 function format(array $diff): string
 {
@@ -42,7 +42,7 @@ function format(array $diff): string
             };
         }, $diff);
     };
-    return implode("\n", flattenAll(['{', $iter($diff, 1), '}']));
+    return implode("\n", flatten(['{', $iter($diff, 1), '}']));
 }
 
 function prepareValue($value, int $depth): string

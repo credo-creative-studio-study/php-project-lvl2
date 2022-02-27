@@ -2,8 +2,6 @@
 
 namespace Differ\Differ;
 
-use function Funct\Collection\sortBy;
-use function Funct\Collection\union;
 use function Differ\Parsers\parse;
 use function Differ\Formatters\format;
 
@@ -33,8 +31,9 @@ function genAst(object $firstData, object $secondData): array
 {
     $firstKeys = array_keys(get_object_vars($firstData));
     $secondKeys = array_keys(get_object_vars($secondData));
-    $unionKeys = union($firstKeys, $secondKeys);
-    $sortedKeys = array_values(sortBy($unionKeys, fn($key) => $key));
+    $unionKeys = array_unique(array_merge($firstKeys, $secondKeys));
+    sort($unionKeys, SORT_STRING);
+    $sortedKeys = $unionKeys;
 
     $buildAst = array_map(function ($key) use ($firstData, $secondData): array {
         if (!property_exists($firstData, $key)) {
