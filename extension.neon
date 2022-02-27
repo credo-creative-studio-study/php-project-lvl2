@@ -1,9 +1,0 @@
-includes:
-  - vendor/hexlet/phpstan-fp/phpstan.neon
-
-parameters:
-    checkMissingIterableValueType: false
-    phpstanFunctionalProgramming:
-        disallowClasses: false
-        disallowThrow: false
-        disallowUnusedExpression: false
