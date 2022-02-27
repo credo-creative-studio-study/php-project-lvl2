@@ -6,3 +6,4 @@ coverage.txt
 clover.xml
 /xml-coverage/
 phpstan.neon
+.phpunit.result.cache
