@@ -1,3 +1,7 @@
+### Hexlet test and linter status:
+https://github.com/yulia633/php-project-lvl2/workflows/hexlet-check/badge.svg
+[![PHP CI](https://github.com/credo-creative-studio-study/php-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/credo-creative-studio-study/php-project-lvl2/actions)
+
 ### Code Climate status:
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/b1b614ebee692635296a/maintainability)](https://codeclimate.com/github/credo-creative-studio-study/php-project-lvl2/maintainability)
