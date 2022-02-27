@@ -54,7 +54,13 @@ function genAst(object $firstData, object $secondData): array
     return $buildAst;
 }
 
-function makeNode(string $key, string $type, $oldValue, $newValue, $children = null): array
+function makeNode(
+    string $key,
+    string $type,
+    mixed $oldValue,
+    mixed $newValue,
+    mixed $children = null
+): array
 {
     return [
         'key' => $key,
