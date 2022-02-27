@@ -19,5 +19,3 @@ function format(array $ast, string $format): string
             throw new \Exception("The report format '{$format}' is not supported");
     }
 }
-© 2022 GitHub, Inc.
-Terms
